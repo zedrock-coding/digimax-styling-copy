@@ -10,22 +10,40 @@
 }
 
 :root {
-  --text: #6b6375;
-  --text-h: #08060d;
-  --bg: #fff;
-  --border: #e5e4e7;
-  --code-bg: #f4f3ec;
-  --accent: #aa3bff;
-  --accent-bg: rgba(170, 59, 255, 0.1);
-  --accent-border: rgba(170, 59, 255, 0.5);
+  /* Text colors */
+  --text: #CFCFCF;              /* Sub-header paragraph text */
+  --text-h: #FFFFFF;            /* Header/main text */
+  
+  /* Backgrounds */
+  --bg: #0D0D0F;                /* Dark page background */
+  --border: #2B2B2D;            /* Computer monitor casing / border tone */
+  --code-bg: #1A1A1C;           /* Feature box background */
+  
+  /* Accent colors */
+  --accent: #6C63FF;            /* Secondary button & step icons */
+  --accent-bg: rgba(108, 99, 255, 0.1);
+  --accent-border: rgba(108, 99, 255, 0.5);
+  
+  /* Pink highlights */
+  --primary-pink: #FF4FA0;      /* CTA buttons, bullet icons */
+  --logo-pink: #E94F9E;         /* Logo text */
+  
+  /* Gradient accent */
+  --gradient-purple: #A64AC9;   /* Gradient start */
+  --gradient-pink: #FF4FA0;     /* Gradient end */
+  
+  /* Social / shadow */
   --social-bg: rgba(244, 243, 236, 0.5);
   --shadow:
-    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+    rgba(0, 0, 0, 0.1) 0 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
 
+  /* Fonts */
   --sans: 'Manrope', system-ui, 'Segoe UI', Roboto, sans-serif;
   --heading: 'Manrope', system-ui, 'Segoe UI', Roboto, sans-serif;
   --mono: ui-monospace, Consolas, monospace;
   --description: 'Sora', system-ui, 'Segoe UI', Roboto, sans-serif;
+  --logo: 'Oceanwide', system-ui, 'Segoe UI', Roboto, sans-serif;
 
   font: 18px/145% var(--sans);
   letter-spacing: 0.18px;
@@ -36,9 +54,11 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-
 }
+.gradient-bg {
+  background: linear-gradient(135deg, var(--gradient-purple), var(--gradient-pink));
+}
+
 
 @media (prefers-color-scheme: dark) {
   :root {

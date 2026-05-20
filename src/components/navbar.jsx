@@ -3,7 +3,7 @@ import logoImg from '../assets/logo_img.svg';
 
 var nonListElements = (item) => (
         <li>
-            <a href="#" className="inline-flex px-[clamp(0.375rem,1vw,1rem)] py-[clamp(0.25rem,0.5vw,0.75rem)] items-center hover:bg-gray-50 rounded whitespace-nowrap text-[clamp(0.65rem,1.1vw,1.25rem)]">
+            <a href="#" className="inline-flex px-[clamp(0.375rem,1vw,1rem)] py-[clamp(0.25rem,0.5vw,0.75rem)] items-center hover:bg-gray-50 rounded whitespace-nowrap text-[clamp(0.65rem,1.1vw,1rem)]">
                 <span>{item}</span>
             </a>
         </li>
@@ -11,7 +11,7 @@ var nonListElements = (item) => (
 
 var listElements = (parentItem, childItems) => (
         <li className='relative parent'>
-            <a href="#" className="inline-flex px-[clamp(0.375rem,1vw,1rem)] py-[clamp(0.25rem,0.5vw,0.75rem)] items-center hover:bg-gray-50 rounded whitespace-nowrap text-[clamp(0.65rem,1.1vw,1.25rem)]">
+            <a href="#" className="inline-flex px-[clamp(0.375rem,1vw,1rem)] py-[clamp(0.25rem,0.5vw,0.75rem)] items-center hover:bg-gray-50 rounded whitespace-nowrap text-[clamp(0.65rem,1.1vw,1rem)]">
                 <span>{parentItem}</span>
             </a>
             <ul className='child transition duration-300 absolute top-full right-0 w-48 bg-[--accent-bg] shadow-lg rounded-b z-50'>
@@ -22,7 +22,7 @@ var listElements = (parentItem, childItems) => (
 
 var childItemElements = (childItem) => (
     <li key={childItem}>
-        <a href="#" className="flex px-4 py-3 hover:bg-gray-50 text-[clamp(0.65rem,1.1vw,1.25rem)] whitespace-nowrap">
+        <a href="#" className="flex px-4 py-3 hover:bg-gray-50 text-[clamp(0.65rem,1.1vw,1rem)] whitespace-nowrap">
             <span>{childItem}</span>
         </a>
     </li>
@@ -36,7 +36,7 @@ function Navbar() {
         <nav className="transition-all duration-300 flex flex-row flex-wrap items-center justify-between px-[clamp(0.5rem,2vw,1.5rem)] py-[clamp(0.25rem,1vw,1rem)] w-full">
             <div className="flex items-center">
                 <img src={logoImg} alt="Logo" className="w-[clamp(1.5rem,3vw,3rem)] h-[clamp(1.5rem,3vw,3rem)] mr-2" />
-                <div className="font-[Oceanwide] whitespace-nowrap text-[clamp(1rem,2.2vw,2.5rem)]">
+                <div className="font-[--logo] whitespace-nowrap text-[clamp(1rem,2.2vw,2rem)]">
                     digimax
                 </div>
             </div>
