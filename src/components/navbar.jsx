@@ -35,7 +35,7 @@ function Navbar() {
     var navBar = (
         <nav className="transition-all duration-300 flex flex-row flex-wrap items-center justify-between px-[clamp(0.5rem,2vw,1.5rem)] py-[clamp(0.25rem,1vw,1rem)] w-full">
             <div className="flex items-center">
-                <img src={logoImg} alt="Logo" className="w-[clamp(1.5rem,3vw,3rem)] h-[clamp(1.5rem,3vw,3rem)] mr-2" />
+                <img src={logoImg} alt="Logo" className="w-[clamp(1rem,2vw,2rem)] h-[clamp(1rem,2vw,2rem)] mr-2" />
                 <div className="font-[--logo] whitespace-nowrap text-[clamp(1rem,2.2vw,2rem)]">
                     digimax
                 </div>
