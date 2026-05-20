@@ -1,6 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Sora:wght@100..800&display=swap');
 @import 'tailwindcss';
 
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Sora:wght@100..800&display=swap');
+
+@font-face {
+  font-family: 'Oceanwide';
+  src: url(/assets/fonts/Oceanwide-SemiBold.otf) format('opentype');
+  font-weight: 100 900;
+  font-style: semi-bold;
+}
 
 :root {
   --text: #6b6375;
@@ -30,9 +37,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  @media (max-width: 1280px) {
-    font-size: 5rem;
-  }
+
 }
 
 @media (prefers-color-scheme: dark) {
@@ -53,4 +58,17 @@
   #social .button-icon {
     filter: invert(1) brightness(2);
   }
+}
+.parent:hover .child {
+  opacity:1;
+  height:auto;
+  overflow:visible;
+  transform: translateY(0);
+  transition: all 0.3s ease-in-out;
+}
+.child {
+  opacity:0;
+  height:0;
+  overflow:hidden;
+  transform: translateY(-10%);
 }

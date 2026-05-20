@@ -1,19 +1,57 @@
-import '../index.css'; 
-import logo from '../assets/logo_img.svg'; 
+import '../index.css';
+import logoImg from '../assets/logo_img.svg';
+
+var nonListElements = (item) => (
+        <li>
+            <a href="#" className="inline-flex px-[clamp(0.375rem,1vw,1rem)] py-[clamp(0.25rem,0.5vw,0.75rem)] items-center hover:bg-gray-50 rounded whitespace-nowrap text-[clamp(0.65rem,1.1vw,1.25rem)]">
+                <span>{item}</span>
+            </a>
+        </li>
+)
+
+var listElements = (parentItem, childItems) => (
+        <li className='relative parent'>
+            <a href="#" className="inline-flex px-[clamp(0.375rem,1vw,1rem)] py-[clamp(0.25rem,0.5vw,0.75rem)] items-center hover:bg-gray-50 rounded whitespace-nowrap text-[clamp(0.65rem,1.1vw,1.25rem)]">
+                <span>{parentItem}</span>
+            </a>
+            <ul className='child transition duration-300 absolute top-full right-0 w-48 bg-[--accent-bg] shadow-lg rounded-b z-50'>
+                {childItems.map(childItem => childItemElements(childItem))}
+            </ul>
+        </li>
+)
+
+var childItemElements = (childItem) => (
+    <li key={childItem}>
+        <a href="#" className="flex px-4 py-3 hover:bg-gray-50 text-[clamp(0.65rem,1.1vw,1.25rem)] whitespace-nowrap">
+            <span>{childItem}</span>
+        </a>
+    </li>
+)
 
 function Navbar() {
-    var logo_img = require(logo);
-}
-function navItems(){
-    let services = ['Web Development', 'App Development', 'Digital Marketing', 'Graphic Design', 'SEO'];
-    let pages = ['page 1', 'page 2', 'page 3', 'page 4', 'page 5'];
-    var items = ['Homepage', 'About Us', 'Services', 'Portfolio', 'Contact Us', 'Pages'];
+    let serviceItems = ['web development', 'mobile development', 'ui/ux design'];
+    let pagesitems = ['Page 1', 'Page 2', 'Page 3'];
 
-    box = () => {
-        for (let i = 0; i < items.length; i++) {
-            if(items[i] === 'Services'){
-                <li className='overflow-hidden hover:display-block hover:overflow-visible text-base bg-[--accent-bg]' key={i}>{items[i]}</li>
-            }
-        }
-    }
+    var navBar = (
+        <nav className="transition-all duration-300 flex flex-row flex-wrap items-center justify-between px-[clamp(0.5rem,2vw,1.5rem)] py-[clamp(0.25rem,1vw,1rem)] w-full">
+            <div className="flex items-center">
+                <img src={logoImg} alt="Logo" className="w-[clamp(1.5rem,3vw,3rem)] h-[clamp(1.5rem,3vw,3rem)] mr-2" />
+                <div className="font-[Oceanwide] whitespace-nowrap text-[clamp(1rem,2.2vw,2.5rem)]">
+                    digimax
+                </div>
+            </div>
+            <ul className="flex flex-row flex-wrap items-center gap-[clamp(0.125rem,0.8vw,1rem)] ml-auto">
+                {nonListElements('HomePage')}
+                {nonListElements('About Us')}
+                {listElements('Services', serviceItems)}
+                {nonListElements('Portfolio')}
+                {nonListElements('Contact Us')}
+                {listElements('Pages', pagesitems)}
+            </ul>
+        </nav>
+    )
+
+    return navBar;
 }
+
+export default Navbar;
