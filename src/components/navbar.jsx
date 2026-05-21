@@ -4,7 +4,7 @@ import dropDown from '../assets/dropdown.svg';
 
 var nonListElements = (item) => (
         <li>
-            <a href="#" className="inline-flex px-[clamp(0.45rem,1.25vw,1.5rem)] py-[clamp(0.25rem,0.5vw,0.75rem)] items-center hover:bg-gray-700 hover:opacity-90 rounded-4xl whitespace-nowrap text-[clamp(0.65rem,1.1vw,1rem)] font-extrabold">
+            <a href="#" className="inline-flex px-[clamp(0.45rem,1.25vw,1.5rem)] py-[clamp(0.25rem,0.5vw,0.75rem)] items-center hover:bg-gray-700 hover:opacity-90 rounded-4xl whitespace-nowrap text-[clamp(0.5rem,0.75vw,0.85rem)] font-extrabold font-sans">
                 <span>{item}</span>
             </a>
         </li>
@@ -12,7 +12,7 @@ var nonListElements = (item) => (
 
 var listElements = (parentItem, childItems) => (
         <li className='relative parent'>
-            <a href="#" className="inline-flex px-[clamp(0.45rem,1.25vw,1.5rem)] py-[clamp(0.25rem,0.5vw,0.75rem)] items-center hover:bg-gray-700 hover:opacity-90 rounded-4xl whitespace-nowrap text-[clamp(0.65rem,1.1vw,1rem)] font-extrabold">
+            <a href="#" className="inline-flex px-[clamp(0.45rem,1.25vw,1.5rem)] py-[clamp(0.25rem,0.5vw,0.75rem)] items-center hover:bg-gray-700 hover:opacity-90 rounded-4xl whitespace-nowrap text-[clamp(0.5rem,0.75vw,0.85rem)] font-extrabold font-sans">
                 <span>{parentItem}</span>
             </a>
             <ul className='child transition duration-300 absolute top-full right-0 w-48 bg-[--accent-bg] shadow-lg rounded-b z-50'>
@@ -23,7 +23,7 @@ var listElements = (parentItem, childItems) => (
 
 var childItemElements = (childItem) => (
     <li key={childItem}>
-        <a href="#" className="flex px-4 py-3 hover:bg-gray-700 hover:opacity-90 text-[clamp(0.65rem,1.1vw,1rem)] whitespace-nowrap">
+        <a href="#" className="flex px-4 py-3 hover:bg-gray-700 hover:opacity-90 text-[clamp(0.5rem,0.75vw,0.85rem)] whitespace-nowrap font-sans">
             <span>{childItem}</span>
         </a>
     </li>
@@ -40,7 +40,7 @@ function Navbar() {
         <nav className="transition-all duration-300 flex flex-row flex-wrap items-center justify-between px-[clamp(0.5rem,2vw,1.5rem)] py-[clamp(0.25rem,1vw,1rem)] w-full">
             <div className="flex items-center">
                 <img src={logoImg} alt="Logo" className="w-[clamp(1.25rem,2.5vw,2.5rem)] h-[clamp(1.5rem,3vw,3rem)] mr-2" />
-                <div className="font-[--logo] whitespace-nowrap text-[clamp(1rem,2.2vw,2rem)]">
+                <div className="font-logo whitespace-nowrap text-[clamp(1rem,2.2vw,2rem)]">
                     digimax
                 </div>
             </div>
@@ -51,7 +51,7 @@ function Navbar() {
                 {nonListElements('Portfolio')}
                 {nonListElements('Contact Us')}
                 {listElements(<span className="flex items-center">Pages {DropDown}</span>, pagesitems)}
-                <button className='px-[clamp(0.5rem,1.25vw,1.5rem)] py-[clamp(0.15rem,0.25vw,0.5rem)] flex items-center bg-gradient-to-r from-gradient-purple via-gradient-pink to-gradient-yellow hover:opacity-90 hover:brightness-125 transition-opacity rounded-4xl whitespace-nowrap text-[clamp(0.65rem,1.1vw,1rem)] font-extrabold text-gray-200 shadow-lg transition duration-300'>
+                <button className='px-[clamp(0.5rem,1.25vw,1.5rem)] py-[clamp(0.15rem,0.25vw,0.5rem)] flex items-center bg-gradient-to-r from-gradient-purple via-gradient-pink to-gradient-yellow hover:opacity-90 hover:brightness-125 transition-opacity rounded-4xl whitespace-nowrap text-[clamp(0.5rem,0.75vw,0.85rem)] font-extrabold text-gray-200  shadow-lg transition duration-300 ease-in-out font-sans'>
                     GET STARTED
                 </button>
             </ul>
