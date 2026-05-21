@@ -1,9 +1,10 @@
 import '../index.css';
 import logoImg from '../assets/logo_img.svg';
+import dropDown from '../assets/dropdown_icon.svg';
 
 var nonListElements = (item) => (
         <li>
-            <a href="#" className="inline-flex px-[clamp(0.375rem,1vw,1rem)] py-[clamp(0.25rem,0.5vw,0.75rem)] items-center hover:bg-gray-50 rounded whitespace-nowrap text-[clamp(0.65rem,1.1vw,1rem)]">
+            <a href="#" className="inline-flex px-[clamp(0.375rem,1vw,1rem)] py-[clamp(0.25rem,0.5vw,0.75rem)] items-center hover:bg-gray-50 rounded whitespace-nowrap text-[clamp(0.65rem,1.1vw,1rem)] font-extrabold">
                 <span>{item}</span>
             </a>
         </li>
@@ -11,7 +12,7 @@ var nonListElements = (item) => (
 
 var listElements = (parentItem, childItems) => (
         <li className='relative parent'>
-            <a href="#" className="inline-flex px-[clamp(0.375rem,1vw,1rem)] py-[clamp(0.25rem,0.5vw,0.75rem)] items-center hover:bg-gray-50 rounded whitespace-nowrap text-[clamp(0.65rem,1.1vw,1rem)]">
+            <a href="#" className="inline-flex px-[clamp(0.375rem,1vw,1rem)] py-[clamp(0.25rem,0.5vw,0.75rem)] items-center hover:bg-gray-50 rounded whitespace-nowrap text-[clamp(0.65rem,1.1vw,1rem)] font-extrabold">
                 <span>{parentItem}</span>
             </a>
             <ul className='child transition duration-300 absolute top-full right-0 w-48 bg-[--accent-bg] shadow-lg rounded-b z-50'>
@@ -28,6 +29,8 @@ var childItemElements = (childItem) => (
     </li>
 )
 
+let DropDown = (<img src={dropDown} alt="Dropdown" className="w-4 h-4 ml-2" />);
+
 function Navbar() {
     let serviceItems = ['web development', 'mobile development', 'ui/ux design'];
     let pagesitems = ['Page 1', 'Page 2', 'Page 3'];
@@ -35,7 +38,7 @@ function Navbar() {
     var navBar = (
         <nav className="transition-all duration-300 flex flex-row flex-wrap items-center justify-between px-[clamp(0.5rem,2vw,1.5rem)] py-[clamp(0.25rem,1vw,1rem)] w-full">
             <div className="flex items-center">
-                <img src={logoImg} alt="Logo" className="w-[clamp(1rem,2vw,2rem)] h-[clamp(1rem,2vw,2rem)] mr-2" />
+                <img src={logoImg} alt="Logo" className="w-[clamp(1.25rem,2.5vw,2.5rem)] h-[clamp(1.5rem,3vw,3rem)] mr-2" />
                 <div className="font-[--logo] whitespace-nowrap text-[clamp(1rem,2.2vw,2rem)]">
                     digimax
                 </div>
@@ -43,10 +46,10 @@ function Navbar() {
             <ul className="flex flex-row flex-wrap items-center gap-[clamp(0.125rem,0.8vw,1rem)] ml-auto">
                 {nonListElements('HomePage')}
                 {nonListElements('About Us')}
-                {listElements('Services', serviceItems)}
+                {listElements(<span className="flex items-center">Services {DropDown}</span>, serviceItems)}
                 {nonListElements('Portfolio')}
                 {nonListElements('Contact Us')}
-                {listElements('Pages', pagesitems)}
+                {listElements(<span className="flex items-center">Pages {DropDown}</span>, pagesitems)}
             </ul>
         </nav>
     )
