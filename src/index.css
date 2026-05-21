@@ -28,10 +28,6 @@
   --primary-pink: #FF4FA0;      /* CTA buttons, bullet icons */
   --logo-pink: #E94F9E;         /* Logo text */
   
-  /* Gradient accent */
-  --gradient-purple: #A64AC9;   /* Gradient start */
-  --gradient-pink: #FF4FA0;     /* Gradient end */
-  
   /* Social / shadow */
   --social-bg: rgba(244, 243, 236, 0.5);
   --shadow:
@@ -55,8 +51,11 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.gradient-bg {
-  background: linear-gradient(135deg, var(--gradient-purple), var(--gradient-pink));
+
+@theme{
+  --color-gradient-purple: rgba(166, 76, 201, 1);
+  --color-gradient-pink: rgba(255, 79, 160, 0.9); 
+  --color-gradient-yellow: rgba(255, 209, 102, 0.93);
 }
 
 
