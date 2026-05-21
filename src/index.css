@@ -30,7 +30,8 @@
   --color-accent: #6C63FF;
   --color-accent-bg: rgba(108, 99, 255, 0.1);
   --color-accent-border: rgba(108, 99, 255, 0.5);
-  --color-primary-pink: #FF4FA0;
+  --color-primary-pink-transparent: rgba(255, 79, 160, 0.3);
+  --color-primary-pink: rgba(255, 79, 160, 1);
   --color-logo-pink: #E94F9E;
   --color-social-bg: rgba(244, 243, 236, 0.5);
 
@@ -45,6 +46,7 @@
   --color-gradient-purple: rgba(166, 76, 201, 1);
   --color-gradient-pink: rgba(255, 79, 160, 0.9); 
   --color-gradient-yellow: rgba(255, 209, 102, 0.93);
+  --color-gradient-purple-transparent: rgba(166, 76, 201, 0.4);
 }
 
 
