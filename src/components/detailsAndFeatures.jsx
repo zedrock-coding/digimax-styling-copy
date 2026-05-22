@@ -7,8 +7,6 @@ import userFlow from '../assets/user.png';
 import graphic from '../assets/graphic-design.png';
 
 //30 70 ratio of the details and features section
-
-// Helper component for individual features
 const FeatureItem = ({ icon,text }) => (
     <span className="flex items-center gap-2 text-text-muted font-description">
         <img src={icon} alt={text} className="w-6 h-6 object-contain" />
@@ -17,8 +15,8 @@ const FeatureItem = ({ icon,text }) => (
 );
 
 const description = (
-        <div className="grid gap-4"> {/* Removed grid-rows-none as it's default for grid children if no template specified */}
-        <h2 className="text-text font-sans text-3xl">Description</h2>
+        <div className="grid gap-4">
+        <h2 className="text-text font-sans text-4xl font-bold">Description</h2>
         <p className="text-text-muted font-description">
             At our workplace we are driven by the moto, For the customer, For the Future. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
@@ -28,7 +26,7 @@ const description = (
         </p>
         <div className="flex flex-col md:flex-row gap-x-8 md:gap-x-50 xl:gap-x-80 mt-6">
             <ul className="list-none list-inside text-text-muted font-description">
-                <li>✓ Expertise in Digital Solutions</li>
+                <li>✓  Expertise in Digital Solutions</li>
                 <li>✓  Innovation Design Approach</li>
                 <li>✓  Strategic Digital Marketing</li>
                 <li>✓  Data-Driven Decisions</li>
@@ -58,7 +56,7 @@ const features = (
 
 const DetailsAndFeatures = () => {
     return(
-        <div className='grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 p-4'>
+        <div className='grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 p-4 gap-8 mt-10 md:mt-15 xl:mt-20 md:gap-12 xl:gap-16'>
             <div className='md:col-span-2 xl:col-span-3'>
                 {description}
             </div>
