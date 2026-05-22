@@ -26,16 +26,16 @@ const description = (
         </p>
         <div className="flex flex-col md:flex-row gap-x-8 md:gap-x-50 xl:gap-x-80 mt-6">
             <ul className="list-none list-inside text-text-muted font-description">
-                <li>✓  Expertise in Digital Solutions</li>
-                <li>✓  Innovation Design Approach</li>
-                <li>✓  Strategic Digital Marketing</li>
-                <li>✓  Data-Driven Decisions</li>
+                <li>✓ &nbsp;Expertise in Digital Solutions</li>
+                <li>✓ &nbsp;Innovation Design Approach</li>
+                <li>✓ &nbsp;Strategic Digital Marketing</li>
+                <li>✓ &nbsp;Data-Driven Decisions</li>
             </ul>
             <ul className="list-none list-inside text-text-muted font-description">
-                <li>✓  Holistic Security Measures</li>
-                <li>✓  Tailored Digital Strategy</li>
-                <li>✓  Responsive & Scalable Design</li>
-                <li>✓  Proven Track Record</li>
+                <li>✓ &nbsp;Holistic Security Measures</li>
+                <li>✓ &nbsp;Tailored Digital Strategy</li>
+                <li>✓ &nbsp;Responsive & Scalable Design</li>
+                <li>✓ &nbsp;Proven Track Record</li>
             </ul>
         </div>
         </div>
