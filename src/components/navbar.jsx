@@ -1,7 +1,5 @@
 import '../index.css';
 import logoImg from '../assets/logo_img.svg';
-import dropDown from '../assets/dropdown.svg';
-
 var nonListElements = (item) => (
         <li>
             <a href="#" className="inline-flex px-[clamp(0.45rem,1.25vw,1.5rem)] py-[clamp(0.25rem,0.5vw,0.75rem)] items-center hover:bg-gray-700 hover:opacity-90 rounded-4xl whitespace-nowrap text-[clamp(0.5rem,0.75vw,0.85rem)] font-extrabold font-sans">
