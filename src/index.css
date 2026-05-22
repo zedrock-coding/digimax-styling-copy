@@ -50,6 +50,7 @@
   --color-gradient-pink: rgba(255, 79, 160, 0.9); 
   --color-gradient-yellow: rgba(255, 209, 102, 0.93);
   --color-gradient-purple-transparent: rgba(166, 76, 201, 0.4);
+  --color-purple-CTA-bg: rgba(186, 95, 220, 0.2);
 
   /* BG color for the how it works section*/
   --color-how-it-works-bg: #fd7fc3;

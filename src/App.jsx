@@ -2,6 +2,7 @@ import Navbar from './components/navbar.jsx';
 import HeroSection from './components/heroSection.jsx';
 import DetailsAndFeatures from './components/detailsAndFeatures.jsx';
 import HowItWorks from './components/HowItWorks.jsx';
+import CTA from './components/CTA.jsx';
 import './index.css'
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
       <HeroSection />
       <DetailsAndFeatures />
       <HowItWorks />
+      <CTA />
     </div>
   )
 
