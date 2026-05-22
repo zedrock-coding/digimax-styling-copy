@@ -1,5 +1,7 @@
 import '../index.css';
 import logoImg from '../assets/logo_img.svg';
+import StyleButton from './styleButton.jsx';
+
 var nonListElements = (item) => (
         <li>
             <a href="#" className="inline-flex px-[clamp(0.45rem,1.25vw,1.5rem)] py-[clamp(0.25rem,0.5vw,0.75rem)] items-center hover:bg-gray-700 hover:opacity-90 rounded-4xl whitespace-nowrap text-[clamp(0.5rem,0.75vw,0.85rem)] font-extrabold font-sans">
@@ -49,9 +51,7 @@ function Navbar() {
                 {nonListElements('Portfolio')}
                 {nonListElements('Contact Us')}
                 {listElements(<span className="flex items-center">Pages {DropDown}</span>, pagesitems)}
-                <button className='px-[clamp(0.5rem,1.25vw,1.5rem)] py-[clamp(0.15rem,0.25vw,0.5rem)] flex items-center bg-gradient-to-r from-gradient-purple via-gradient-pink to-gradient-yellow hover:opacity-90 hover:brightness-125 transition-opacity rounded-4xl whitespace-nowrap text-[clamp(0.5rem,0.75vw,0.85rem)] font-extrabold text-gray-200  shadow-lg transition duration-300 ease-in-out font-sans'>
-                    GET STARTED
-                </button>
+                <StyleButton matter="GET STARTED" />
             </ul>
         </nav>
     )

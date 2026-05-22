@@ -24,6 +24,7 @@
   /* Colors from :root */
   --color-text: #CFCFCF;
   --color-text-h: #FFFFFF;
+  --color-text-muted: rgba(156, 145, 175, 0.7);
   --color-bg: #0D0D0F;
   --color-border: #2B2B2D;
   --color-code-bg: #1A1A1C;
@@ -32,6 +33,7 @@
   --color-accent-border: rgba(108, 99, 255, 0.5);
   --color-primary-pink-transparent: rgba(255, 79, 160, 0.3);
   --color-primary-pink: rgba(255, 79, 160, 1);
+  --color-dark-pink: #ce4085;
   --color-logo-pink: #E94F9E;
   --color-social-bg: rgba(244, 243, 236, 0.5);
 
