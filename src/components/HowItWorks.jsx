@@ -24,7 +24,7 @@ const Cards = ({img, title, text, btnText}) => {
 const HowItWorks = () => {
     return (
     <div className='w-full grid grid-rows-none gap-8 bg-radial-[at_50%_0%] from-gradient-purple-faded to-transparent from-0% to-35%'>
-        <h4 className='font-extrabold text-primary-pink font-sans text-[clamp(0.45rem,0.75vw,1rem)] text-center'>How It Works</h4>
+        <h4 className='font-extrabold text-primary-pink font-sans text-[clamp(0.45rem,0.75vw,1rem)] text-center mt-30'>How It Works</h4>
         <h2 className='text-text-h text-extrabold font-sans text-4xl text-center w-[50%] mx-auto'>Unlock Astonishing Results with Just 3 Simple Steps!</h2>
         <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 items-center justify-between gap-6 px-4 py-12'>
             <Cards img={chat} title="Free Consultation" text={cardText} btnText="CHAT NOW" />
