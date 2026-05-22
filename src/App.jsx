@@ -1,7 +1,7 @@
-import { useState } from 'react'
-import Navbar from './components/navbar.jsx'
-import HeroSection from './components/heroSection.jsx'
-import DetailsAndFeatures from './components/detailsAndFeatures.jsx'
+import Navbar from './components/navbar.jsx';
+import HeroSection from './components/heroSection.jsx';
+import DetailsAndFeatures from './components/detailsAndFeatures.jsx';
+import HowItWorks from './components/HowItWorks.jsx';
 import './index.css'
 
 function App() {
@@ -10,6 +10,7 @@ function App() {
       <Navbar />
       <HeroSection />
       <DetailsAndFeatures />
+      <HowItWorks />
     </div>
   )
 
