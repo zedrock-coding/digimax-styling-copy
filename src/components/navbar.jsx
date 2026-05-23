@@ -3,22 +3,22 @@ import logoImg from '../assets/logo_img.svg';
 import StyleButton from './styleButton.jsx';
 
 var nonListElements = (item) => (
-        <li>
-            <a href="#" className="inline-flex px-[clamp(0.45rem,1.25vw,1.5rem)] py-[clamp(0.25rem,0.5vw,0.75rem)] items-center hover:bg-gray-700 hover:opacity-90 rounded-4xl whitespace-nowrap text-[clamp(0.5rem,0.75vw,0.85rem)] font-extrabold font-sans">
-                <span>{item}</span>
-            </a>
-        </li>
+    <li>
+        <a href="#" className="inline-flex px-[clamp(0.45rem,1.25vw,1.5rem)] py-[clamp(0.25rem,0.5vw,0.75rem)] items-center hover:bg-gray-700 hover:opacity-90 rounded-4xl whitespace-nowrap text-[clamp(0.5rem,0.75vw,0.85rem)] font-extrabold font-sans">
+            <span>{item}</span>
+        </a>
+    </li>
 )
 
 var listElements = (parentItem, childItems) => (
-        <li className='relative parent'>
-            <a href="#" className="inline-flex px-[clamp(0.45rem,1.25vw,1.5rem)] py-[clamp(0.25rem,0.5vw,0.75rem)] items-center hover:bg-gray-700 hover:opacity-90 rounded-4xl whitespace-nowrap text-[clamp(0.5rem,0.75vw,0.85rem)] font-extrabold font-sans">
-                <span>{parentItem}</span>
-            </a>
-            <ul className='child transition duration-300 absolute top-full right-0 w-48 bg-[--accent-bg] shadow-lg rounded-b z-50'>
-                {childItems.map(childItem => childItemElements(childItem))}
-            </ul>
-        </li>
+    <li className='relative parent'>
+        <a href="#" className="inline-flex px-[clamp(0.45rem,1.25vw,1.5rem)] py-[clamp(0.25rem,0.5vw,0.75rem)] items-center hover:bg-gray-700 hover:opacity-90 rounded-4xl whitespace-nowrap text-[clamp(0.5rem,0.75vw,0.85rem)] font-extrabold font-sans">
+            <span>{parentItem}</span>
+        </a>
+        <ul className='child transition duration-300 absolute top-full right-0 w-48 bg-[--accent-bg] shadow-lg rounded-b z-50'>
+            {childItems.map(childItem => childItemElements(childItem))}
+        </ul>
+    </li>
 )
 
 var childItemElements = (childItem) => (

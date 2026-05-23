@@ -2,7 +2,7 @@ import '../index.css';
 
 const StyleButton = ({ matter, fullWidth = false }) => {
     const widthClasses = fullWidth
-        ? 'w-full py-[clamp(0.25rem,0.5vw,0.75rem)]' 
+        ? 'w-full py-[clamp(0.25rem,0.5vw,0.75rem)]'
         : 'px-[clamp(0.5rem,1.25vw,1.5rem)] py-[clamp(0.15rem,0.25vw,0.5rem)] size-fit';
 
     return (
