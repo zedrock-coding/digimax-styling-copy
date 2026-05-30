@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: 'Oceanwide';
-  src: url(/assets/fonts/Oceanwide-SemiBold.otf) format('opentype');
+  src: url('./assets/fonts/Oceanwide-SemiBold.otf') format('opentype');
   font-weight: 100 900;
   font-style: semi-bold;
 }

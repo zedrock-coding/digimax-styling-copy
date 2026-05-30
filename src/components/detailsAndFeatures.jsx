@@ -24,7 +24,7 @@ const description = (
         <p className="text-text-muted font-description">
             At our workplace we are driven by the motto, For the customer, For the Future. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
         </p>
-        <div className="flex flex-col md:flex-row gap-x-8 md:gap-x-50 xl:gap-x-80 mt-6">
+        <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 lg:gap-16 mt-6">
             <ul className="list-none list-inside text-text-muted font-description">
                 <li>✓ &nbsp;Expertise in Digital Solutions</li>
                 <li>✓ &nbsp;Innovation Design Approach</li>
@@ -42,7 +42,7 @@ const description = (
 )
 
 const features = (
-    <div className="grid gap-4 bg-gradient-to-b from-primary-pink-transparent to-transparent p-10 from-1% to-60% rounded-lg">
+    <div className="flex flex-col gap-4 bg-gradient-to-b from-primary-pink-transparent to-transparent p-6 md:p-10 from-1% to-60% rounded-xl w-full">
         <h2 className="text-text font-sans text-4xl font-bold">Features</h2>
         <FeatureItem icon={UIUX} text="UI/UX User Friendly" />
         <FeatureItem icon={target} text="Focus On Target" />
